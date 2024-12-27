@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AracKiralama2023Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TBLARACLAR">
+          <Key>
+            <PropertyRef Name="AracID" />
+          </Key>
+          <Property Name="AracID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Marka" Type="int" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="UretımYılı" Type="date" />
+          <Property Name="Plaka" Type="nvarchar" MaxLength="9" />
+          <Property Name="YakıtTıpı" Type="int" />
+          <Property Name="FOTO" Type="nvarchar(max)" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLÇEKSENET">
+          <Key>
+            <PropertyRef Name="CekID" />
+          </Key>
+          <Property Name="CekID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ÇekTür" Type="int" />
+          <Property Name="Tarih" Type="date" />
+          <Property Name="OdemeTarih" Type="date" />
+          <Property Name="FIRMA" Type="int" />
+          <Property Name="Tutar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="50" />
+          <Property Name="Açıklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="DURUM1" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLFIRMAHAREKETLERI">
+          <Key>
+            <PropertyRef Name="HAREKETID" />
+          </Key>
+          <Property Name="HAREKETID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUN" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="nvarchar" MaxLength="50" />
+          <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ADET" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="FIRMA" Type="int" />
+          <Property Name="TUR" Type="int" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLGELIR">
+          <Key>
+            <PropertyRef Name="GelırID" />
+          </Key>
+          <Property Name="GelırID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GelirTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="GelirTutarı" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GelirTarıh" Type="date" />
+          <Property Name="DURUM" Type="bit" />
+          <Property Name="Acıklama" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TBLGIDER">
+          <Key>
+            <PropertyRef Name="GıderID" />
+          </Key>
+          <Property Name="GıderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GiderTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="GıderTutarı" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GelirTarih" Type="date" />
+          <Property Name="DURUM" Type="bit" />
+          <Property Name="Açıklama" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TBLHATIRLATMA">
+          <Key>
+            <PropertyRef Name="HatırlatmaID" />
+          </Key>
+          <Property Name="HatırlatmaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HatırlatmaSebep" Type="nvarchar" MaxLength="50" />
+          <Property Name="HatırlatmaTarıh" Type="date" />
+          <Property Name="KayıtTarıh" Type="date" />
+          <Property Name="Mesaj" Type="nvarchar(max)" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLMARKA">
+          <Key>
+            <PropertyRef Name="MarkaID" />
+          </Key>
+          <Property Name="MarkaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Marka" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLMUST">
+          <Key>
+            <PropertyRef Name="MustID" />
+          </Key>
+          <Property Name="MustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MustAdı" Type="nvarchar" MaxLength="50" />
+          <Property Name="MustSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="MustTC" Type="nvarchar" MaxLength="50" />
+          <Property Name="MustEhliyetNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="MustAdres" Type="nvarchar" MaxLength="50" />
+          <Property Name="MustTelefon" Type="nchar" MaxLength="9" />
+          <Property Name="DURUM" Type="bit" />
+          <Property Name="FOTO" Type="nvarchar(max)" />
+          <Property Name="GirisTarih" Type="date" />
+        </EntityType>
+        <EntityType Name="TBLODEMEBICIM">
+          <Key>
+            <PropertyRef Name="BıcımID" />
+          </Key>
+          <Property Name="BıcımID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OdemeTıpı" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLPERSODEME">
+          <Key>
+            <PropertyRef Name="PersOdemeID" />
+          </Key>
+          <Property Name="PersOdemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TUR" Type="int" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="ODENEN" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PEDID" Type="int" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLPERSONEL">
+          <Key>
+            <PropertyRef Name="PerID" />
+          </Key>
+          <Property Name="PerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PerAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="PerSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="PerTelefon" Type="nchar" MaxLength="10" />
+          <Property Name="PerTC" Type="nvarchar" MaxLength="11" />
+          <Property Name="PerSicil" Type="nvarchar" MaxLength="50" />
+          <Property Name="PerGirisTarih" Type="date" />
+          <Property Name="PerAdres" Type="nvarchar(max)" />
+          <Property Name="PerFoto" Type="nvarchar(max)" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBLPERSONELODEME">
+          <Key>
+            <PropertyRef Name="OdemeID" />
+          </Key>
+          <Property Name="OdemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OdemeTuru" Type="int" />
+          <Property Name="OdemeTutarı" Type="nvarchar" MaxLength="50" />
+          <Property Name="OdenenKısı" Type="int" />
+          <Property Name="DURUM" Type="bit" />
+          <Property Name="Tarh" Type="date" />
+        </EntityType>
+        <EntityType Name="TBLSIRKET">
+          <Key>
+            <PropertyRef Name="SırkID" />
+          </Key>
+          <Property Name="SırkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SırkTC" Type="nchar" MaxLength="11" />
+          <Property Name="SırkAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="SırkUnvan" Type="nvarchar" MaxLength="50" />
+          <Property Name="SırkTelefon" Type="nchar" MaxLength="9" />
+          <Property Name="SırkAdres" Type="nvarchar(max)" />
+          <Property Name="SırkVergı" Type="nvarchar" MaxLength="50" />
+          <Property Name="SırketTıp" Type="bit" />
+          <Property Name="DURUM" Type="bit" />
+          <Property Name="FOTO" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TBLYAKIT">
+          <Key>
+            <PropertyRef Name="YakıtID" />
+          </Key>
+          <Property Name="YakıtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yakıt" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_TBLARACLAR_TBLMARKA">
+          <End Role="TBLMARKA" Type="Self.TBLMARKA" Multiplicity="0..1" />
+          <End Role="TBLARACLAR" Type="Self.TBLARACLAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMARKA">
+              <PropertyRef Name="MarkaID" />
+            </Principal>
+            <Dependent Role="TBLARACLAR">
+              <PropertyRef Name="Marka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLARACLAR_TBLYAKIT">
+          <End Role="TBLYAKIT" Type="Self.TBLYAKIT" Multiplicity="0..1" />
+          <End Role="TBLARACLAR" Type="Self.TBLARACLAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLYAKIT">
+              <PropertyRef Name="YakıtID" />
+            </Principal>
+            <Dependent Role="TBLARACLAR">
+              <PropertyRef Name="YakıtTıpı" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLÇEKSENET_TBLODEMEBICIM">
+          <End Role="TBLODEMEBICIM" Type="Self.TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Role="TBLÇEKSENET" Type="Self.TBLÇEKSENET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLÇEKSENET">
+              <PropertyRef Name="ÇekTür" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLÇEKSENET_TBLSIRKET">
+          <End Role="TBLSIRKET" Type="Self.TBLSIRKET" Multiplicity="0..1" />
+          <End Role="TBLÇEKSENET" Type="Self.TBLÇEKSENET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSIRKET">
+              <PropertyRef Name="SırkID" />
+            </Principal>
+            <Dependent Role="TBLÇEKSENET">
+              <PropertyRef Name="FIRMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM">
+          <End Role="TBLODEMEBICIM" Type="Self.TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Role="TBLFIRMAHAREKETLERI" Type="Self.TBLFIRMAHAREKETLERI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLFIRMAHAREKETLERI">
+              <PropertyRef Name="TUR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLFIRMAHAREKETLERI_TBLSIRKET">
+          <End Role="TBLSIRKET" Type="Self.TBLSIRKET" Multiplicity="0..1" />
+          <End Role="TBLFIRMAHAREKETLERI" Type="Self.TBLFIRMAHAREKETLERI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSIRKET">
+              <PropertyRef Name="SırkID" />
+            </Principal>
+            <Dependent Role="TBLFIRMAHAREKETLERI">
+              <PropertyRef Name="FIRMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSODEME_TBLODEMEBICIM">
+          <End Role="TBLODEMEBICIM" Type="Self.TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Role="TBLPERSODEME" Type="Self.TBLPERSODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSODEME">
+              <PropertyRef Name="TUR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSODEME_TBLPERSONEL">
+          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+          <End Role="TBLPERSODEME" Type="Self.TBLPERSODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PerID" />
+            </Principal>
+            <Dependent Role="TBLPERSODEME">
+              <PropertyRef Name="PEDID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLODEMEBICIM">
+          <End Role="TBLODEMEBICIM" Type="Self.TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Role="TBLPERSONELODEME" Type="Self.TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdemeTuru" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLODEMEBICIM1">
+          <End Role="TBLODEMEBICIM" Type="Self.TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Role="TBLPERSONELODEME" Type="Self.TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdemeTuru" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLPERSONEL">
+          <End Role="TBLPERSONEL" Type="Self.TBLPERSONEL" Multiplicity="0..1" />
+          <End Role="TBLPERSONELODEME" Type="Self.TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PerID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdenenKısı" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="AracKiralama2023ModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLARACLAR" EntityType="Self.TBLARACLAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLÇEKSENET" EntityType="Self.TBLÇEKSENET" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFIRMAHAREKETLERI" EntityType="Self.TBLFIRMAHAREKETLERI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLGELIR" EntityType="Self.TBLGELIR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLGIDER" EntityType="Self.TBLGIDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLHATIRLATMA" EntityType="Self.TBLHATIRLATMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMARKA" EntityType="Self.TBLMARKA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMUST" EntityType="Self.TBLMUST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLODEMEBICIM" EntityType="Self.TBLODEMEBICIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLPERSODEME" EntityType="Self.TBLPERSODEME" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLPERSONELODEME" EntityType="Self.TBLPERSONELODEME" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLSIRKET" EntityType="Self.TBLSIRKET" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLYAKIT" EntityType="Self.TBLYAKIT" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBLARACLAR_TBLMARKA" Association="Self.FK_TBLARACLAR_TBLMARKA">
+            <End Role="TBLMARKA" EntitySet="TBLMARKA" />
+            <End Role="TBLARACLAR" EntitySet="TBLARACLAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLARACLAR_TBLYAKIT" Association="Self.FK_TBLARACLAR_TBLYAKIT">
+            <End Role="TBLYAKIT" EntitySet="TBLYAKIT" />
+            <End Role="TBLARACLAR" EntitySet="TBLARACLAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLÇEKSENET_TBLODEMEBICIM" Association="Self.FK_TBLÇEKSENET_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLÇEKSENET" EntitySet="TBLÇEKSENET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLÇEKSENET_TBLSIRKET" Association="Self.FK_TBLÇEKSENET_TBLSIRKET">
+            <End Role="TBLSIRKET" EntitySet="TBLSIRKET" />
+            <End Role="TBLÇEKSENET" EntitySet="TBLÇEKSENET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM" Association="Self.FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLFIRMAHAREKETLERI" EntitySet="TBLFIRMAHAREKETLERI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLFIRMAHAREKETLERI_TBLSIRKET" Association="Self.FK_TBLFIRMAHAREKETLERI_TBLSIRKET">
+            <End Role="TBLSIRKET" EntitySet="TBLSIRKET" />
+            <End Role="TBLFIRMAHAREKETLERI" EntitySet="TBLFIRMAHAREKETLERI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSODEME_TBLODEMEBICIM" Association="Self.FK_TBLPERSODEME_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSODEME" EntitySet="TBLPERSODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSODEME_TBLPERSONEL" Association="Self.FK_TBLPERSODEME_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLPERSODEME" EntitySet="TBLPERSODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLODEMEBICIM" Association="Self.FK_TBLPERSONELODEME_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLODEMEBICIM1" Association="Self.FK_TBLPERSONELODEME_TBLODEMEBICIM1">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLPERSONEL" Association="Self.FK_TBLPERSONELODEME_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AracKiralama2023Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AracKiralama2023Entities3" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(AracKiralama2023Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(AracKiralama2023Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="sysdiagrams" EntityType="AracKiralama2023Model.sysdiagrams" />
+          <EntitySet Name="TBLARACLAR" EntityType="AracKiralama2023Model.TBLARACLAR" />
+          <EntitySet Name="TBLÇEKSENET" EntityType="AracKiralama2023Model.TBLÇEKSENET" />
+          <EntitySet Name="TBLFIRMAHAREKETLERI" EntityType="AracKiralama2023Model.TBLFIRMAHAREKETLERI" />
+          <EntitySet Name="TBLGELIR" EntityType="AracKiralama2023Model.TBLGELIR" />
+          <EntitySet Name="TBLGIDER" EntityType="AracKiralama2023Model.TBLGIDER" />
+          <EntitySet Name="TBLHATIRLATMA" EntityType="AracKiralama2023Model.TBLHATIRLATMA" />
+          <EntitySet Name="TBLMARKA" EntityType="AracKiralama2023Model.TBLMARKA" />
+          <EntitySet Name="TBLMUST" EntityType="AracKiralama2023Model.TBLMUST" />
+          <EntitySet Name="TBLODEMEBICIM" EntityType="AracKiralama2023Model.TBLODEMEBICIM" />
+          <EntitySet Name="TBLPERSODEME" EntityType="AracKiralama2023Model.TBLPERSODEME" />
+          <EntitySet Name="TBLPERSONEL" EntityType="AracKiralama2023Model.TBLPERSONEL" />
+          <EntitySet Name="TBLPERSONELODEME" EntityType="AracKiralama2023Model.TBLPERSONELODEME" />
+          <EntitySet Name="TBLSIRKET" EntityType="AracKiralama2023Model.TBLSIRKET" />
+          <EntitySet Name="TBLYAKIT" EntityType="AracKiralama2023Model.TBLYAKIT" />
+          <AssociationSet Name="FK_TBLARACLAR_TBLMARKA" Association="AracKiralama2023Model.FK_TBLARACLAR_TBLMARKA">
+            <End Role="TBLMARKA" EntitySet="TBLMARKA" />
+            <End Role="TBLARACLAR" EntitySet="TBLARACLAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLARACLAR_TBLYAKIT" Association="AracKiralama2023Model.FK_TBLARACLAR_TBLYAKIT">
+            <End Role="TBLYAKIT" EntitySet="TBLYAKIT" />
+            <End Role="TBLARACLAR" EntitySet="TBLARACLAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLÇEKSENET_TBLODEMEBICIM" Association="AracKiralama2023Model.FK_TBLÇEKSENET_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLÇEKSENET" EntitySet="TBLÇEKSENET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLÇEKSENET_TBLSIRKET" Association="AracKiralama2023Model.FK_TBLÇEKSENET_TBLSIRKET">
+            <End Role="TBLSIRKET" EntitySet="TBLSIRKET" />
+            <End Role="TBLÇEKSENET" EntitySet="TBLÇEKSENET" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM" Association="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLFIRMAHAREKETLERI" EntitySet="TBLFIRMAHAREKETLERI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLFIRMAHAREKETLERI_TBLSIRKET" Association="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLSIRKET">
+            <End Role="TBLSIRKET" EntitySet="TBLSIRKET" />
+            <End Role="TBLFIRMAHAREKETLERI" EntitySet="TBLFIRMAHAREKETLERI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSODEME_TBLODEMEBICIM" Association="AracKiralama2023Model.FK_TBLPERSODEME_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSODEME" EntitySet="TBLPERSODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLODEMEBICIM" Association="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLODEMEBICIM1" Association="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM1">
+            <End Role="TBLODEMEBICIM" EntitySet="TBLODEMEBICIM" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSODEME_TBLPERSONEL" Association="AracKiralama2023Model.FK_TBLPERSODEME_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLPERSODEME" EntitySet="TBLPERSODEME" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLPERSONELODEME_TBLPERSONEL" Association="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLPERSONEL">
+            <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
+            <End Role="TBLPERSONELODEME" EntitySet="TBLPERSONELODEME" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBLARACLAR">
+          <Key>
+            <PropertyRef Name="AracID" />
+          </Key>
+          <Property Name="AracID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Marka" Type="Int32" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UretımYılı" Type="DateTime" Precision="0" />
+          <Property Name="Plaka" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="YakıtTıpı" Type="Int32" />
+          <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM" Type="Boolean" />
+          <NavigationProperty Name="TBLMARKA" Relationship="AracKiralama2023Model.FK_TBLARACLAR_TBLMARKA" FromRole="TBLARACLAR" ToRole="TBLMARKA" />
+          <NavigationProperty Name="TBLYAKIT" Relationship="AracKiralama2023Model.FK_TBLARACLAR_TBLYAKIT" FromRole="TBLARACLAR" ToRole="TBLYAKIT" />
+        </EntityType>
+        <EntityType Name="TBLÇEKSENET">
+          <Key>
+            <PropertyRef Name="CekID" />
+          </Key>
+          <Property Name="CekID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ÇekTür" Type="Int32" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+          <Property Name="OdemeTarih" Type="DateTime" Precision="0" />
+          <Property Name="FIRMA" Type="Int32" />
+          <Property Name="Tutar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Açıklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM1" Type="Boolean" />
+          <NavigationProperty Name="TBLODEMEBICIM" Relationship="AracKiralama2023Model.FK_TBLÇEKSENET_TBLODEMEBICIM" FromRole="TBLÇEKSENET" ToRole="TBLODEMEBICIM" />
+          <NavigationProperty Name="TBLSIRKET" Relationship="AracKiralama2023Model.FK_TBLÇEKSENET_TBLSIRKET" FromRole="TBLÇEKSENET" ToRole="TBLSIRKET" />
+        </EntityType>
+        <EntityType Name="TBLFIRMAHAREKETLERI">
+          <Key>
+            <PropertyRef Name="HAREKETID" />
+          </Key>
+          <Property Name="HAREKETID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TUTAR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ADET" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="FIRMA" Type="Int32" />
+          <Property Name="TUR" Type="Int32" />
+          <Property Name="DURUM" Type="Boolean" />
+          <NavigationProperty Name="TBLODEMEBICIM" Relationship="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM" FromRole="TBLFIRMAHAREKETLERI" ToRole="TBLODEMEBICIM" />
+          <NavigationProperty Name="TBLSIRKET" Relationship="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLSIRKET" FromRole="TBLFIRMAHAREKETLERI" ToRole="TBLSIRKET" />
+        </EntityType>
+        <EntityType Name="TBLGELIR">
+          <Key>
+            <PropertyRef Name="GelırID" />
+          </Key>
+          <Property Name="GelırID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GelirTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GelirTutarı" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GelirTarıh" Type="DateTime" Precision="0" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="Acıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBLGIDER">
+          <Key>
+            <PropertyRef Name="GıderID" />
+          </Key>
+          <Property Name="GıderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GiderTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GıderTutarı" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GelirTarih" Type="DateTime" Precision="0" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBLHATIRLATMA">
+          <Key>
+            <PropertyRef Name="HatırlatmaID" />
+          </Key>
+          <Property Name="HatırlatmaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HatırlatmaSebep" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HatırlatmaTarıh" Type="DateTime" Precision="0" />
+          <Property Name="KayıtTarıh" Type="DateTime" Precision="0" />
+          <Property Name="Mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBLMARKA">
+          <Key>
+            <PropertyRef Name="MarkaID" />
+          </Key>
+          <Property Name="MarkaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBLARACLAR" Relationship="AracKiralama2023Model.FK_TBLARACLAR_TBLMARKA" FromRole="TBLMARKA" ToRole="TBLARACLAR" />
+        </EntityType>
+        <EntityType Name="TBLMUST">
+          <Key>
+            <PropertyRef Name="MustID" />
+          </Key>
+          <Property Name="MustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MustAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MustSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MustTC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MustEhliyetNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MustAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MustTelefon" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GirisTarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="TBLODEMEBICIM">
+          <Key>
+            <PropertyRef Name="BıcımID" />
+          </Key>
+          <Property Name="BıcımID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OdemeTıpı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBLÇEKSENET" Relationship="AracKiralama2023Model.FK_TBLÇEKSENET_TBLODEMEBICIM" FromRole="TBLODEMEBICIM" ToRole="TBLÇEKSENET" />
+          <NavigationProperty Name="TBLFIRMAHAREKETLERI" Relationship="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM" FromRole="TBLODEMEBICIM" ToRole="TBLFIRMAHAREKETLERI" />
+          <NavigationProperty Name="TBLPERSODEME" Relationship="AracKiralama2023Model.FK_TBLPERSODEME_TBLODEMEBICIM" FromRole="TBLODEMEBICIM" ToRole="TBLPERSODEME" />
+          <NavigationProperty Name="TBLPERSONELODEME" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM" FromRole="TBLODEMEBICIM" ToRole="TBLPERSONELODEME" />
+          <NavigationProperty Name="TBLPERSONELODEME1" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM1" FromRole="TBLODEMEBICIM" ToRole="TBLPERSONELODEME" />
+        </EntityType>
+        <EntityType Name="TBLPERSODEME">
+          <Key>
+            <PropertyRef Name="PersOdemeID" />
+          </Key>
+          <Property Name="PersOdemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TUR" Type="Int32" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="ODENEN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PEDID" Type="Int32" />
+          <Property Name="DURUM" Type="Boolean" />
+          <NavigationProperty Name="TBLODEMEBICIM" Relationship="AracKiralama2023Model.FK_TBLPERSODEME_TBLODEMEBICIM" FromRole="TBLPERSODEME" ToRole="TBLODEMEBICIM" />
+          <NavigationProperty Name="TBLPERSONEL" Relationship="AracKiralama2023Model.FK_TBLPERSODEME_TBLPERSONEL" FromRole="TBLPERSODEME" ToRole="TBLPERSONEL" />
+        </EntityType>
+        <EntityType Name="TBLPERSONEL">
+          <Key>
+            <PropertyRef Name="PerID" />
+          </Key>
+          <Property Name="PerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PerAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PerSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PerTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PerTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="PerSicil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PerGirisTarih" Type="DateTime" Precision="0" />
+          <Property Name="PerAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PerFoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM" Type="Boolean" />
+          <NavigationProperty Name="TBLPERSODEME" Relationship="AracKiralama2023Model.FK_TBLPERSODEME_TBLPERSONEL" FromRole="TBLPERSONEL" ToRole="TBLPERSODEME" />
+          <NavigationProperty Name="TBLPERSONELODEME" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLPERSONEL" FromRole="TBLPERSONEL" ToRole="TBLPERSONELODEME" />
+        </EntityType>
+        <EntityType Name="TBLPERSONELODEME">
+          <Key>
+            <PropertyRef Name="OdemeID" />
+          </Key>
+          <Property Name="OdemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OdemeTuru" Type="Int32" />
+          <Property Name="OdemeTutarı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OdenenKısı" Type="Int32" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="Tarh" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="TBLODEMEBICIM" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM" FromRole="TBLPERSONELODEME" ToRole="TBLODEMEBICIM" />
+          <NavigationProperty Name="TBLODEMEBICIM1" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLODEMEBICIM1" FromRole="TBLPERSONELODEME" ToRole="TBLODEMEBICIM" />
+          <NavigationProperty Name="TBLPERSONEL" Relationship="AracKiralama2023Model.FK_TBLPERSONELODEME_TBLPERSONEL" FromRole="TBLPERSONELODEME" ToRole="TBLPERSONEL" />
+        </EntityType>
+        <EntityType Name="TBLSIRKET">
+          <Key>
+            <PropertyRef Name="SırkID" />
+          </Key>
+          <Property Name="SırkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SırkTC" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="SırkAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SırkUnvan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SırkTelefon" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <Property Name="SırkAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SırkVergı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SırketTıp" Type="Boolean" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBLÇEKSENET" Relationship="AracKiralama2023Model.FK_TBLÇEKSENET_TBLSIRKET" FromRole="TBLSIRKET" ToRole="TBLÇEKSENET" />
+          <NavigationProperty Name="TBLFIRMAHAREKETLERI" Relationship="AracKiralama2023Model.FK_TBLFIRMAHAREKETLERI_TBLSIRKET" FromRole="TBLSIRKET" ToRole="TBLFIRMAHAREKETLERI" />
+        </EntityType>
+        <EntityType Name="TBLYAKIT">
+          <Key>
+            <PropertyRef Name="YakıtID" />
+          </Key>
+          <Property Name="YakıtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yakıt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBLARACLAR" Relationship="AracKiralama2023Model.FK_TBLARACLAR_TBLYAKIT" FromRole="TBLYAKIT" ToRole="TBLARACLAR" />
+        </EntityType>
+        <Association Name="FK_TBLARACLAR_TBLMARKA">
+          <End Type="AracKiralama2023Model.TBLMARKA" Role="TBLMARKA" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLARACLAR" Role="TBLARACLAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMARKA">
+              <PropertyRef Name="MarkaID" />
+            </Principal>
+            <Dependent Role="TBLARACLAR">
+              <PropertyRef Name="Marka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLARACLAR_TBLYAKIT">
+          <End Type="AracKiralama2023Model.TBLYAKIT" Role="TBLYAKIT" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLARACLAR" Role="TBLARACLAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLYAKIT">
+              <PropertyRef Name="YakıtID" />
+            </Principal>
+            <Dependent Role="TBLARACLAR">
+              <PropertyRef Name="YakıtTıpı" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLÇEKSENET_TBLODEMEBICIM">
+          <End Type="AracKiralama2023Model.TBLODEMEBICIM" Role="TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLÇEKSENET" Role="TBLÇEKSENET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLÇEKSENET">
+              <PropertyRef Name="ÇekTür" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLÇEKSENET_TBLSIRKET">
+          <End Type="AracKiralama2023Model.TBLSIRKET" Role="TBLSIRKET" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLÇEKSENET" Role="TBLÇEKSENET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSIRKET">
+              <PropertyRef Name="SırkID" />
+            </Principal>
+            <Dependent Role="TBLÇEKSENET">
+              <PropertyRef Name="FIRMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLFIRMAHAREKETLERI_TBLODEMEBICIM">
+          <End Type="AracKiralama2023Model.TBLODEMEBICIM" Role="TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLFIRMAHAREKETLERI" Role="TBLFIRMAHAREKETLERI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLFIRMAHAREKETLERI">
+              <PropertyRef Name="TUR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLFIRMAHAREKETLERI_TBLSIRKET">
+          <End Type="AracKiralama2023Model.TBLSIRKET" Role="TBLSIRKET" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLFIRMAHAREKETLERI" Role="TBLFIRMAHAREKETLERI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSIRKET">
+              <PropertyRef Name="SırkID" />
+            </Principal>
+            <Dependent Role="TBLFIRMAHAREKETLERI">
+              <PropertyRef Name="FIRMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSODEME_TBLODEMEBICIM">
+          <End Type="AracKiralama2023Model.TBLODEMEBICIM" Role="TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLPERSODEME" Role="TBLPERSODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSODEME">
+              <PropertyRef Name="TUR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLODEMEBICIM">
+          <End Type="AracKiralama2023Model.TBLODEMEBICIM" Role="TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLPERSONELODEME" Role="TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdemeTuru" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLODEMEBICIM1">
+          <End Type="AracKiralama2023Model.TBLODEMEBICIM" Role="TBLODEMEBICIM" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLPERSONELODEME" Role="TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLODEMEBICIM">
+              <PropertyRef Name="BıcımID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdemeTuru" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSODEME_TBLPERSONEL">
+          <End Type="AracKiralama2023Model.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLPERSODEME" Role="TBLPERSODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PerID" />
+            </Principal>
+            <Dependent Role="TBLPERSODEME">
+              <PropertyRef Name="PEDID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLPERSONELODEME_TBLPERSONEL">
+          <End Type="AracKiralama2023Model.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
+          <End Type="AracKiralama2023Model.TBLPERSONELODEME" Role="TBLPERSONELODEME" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLPERSONEL">
+              <PropertyRef Name="PerID" />
+            </Principal>
+            <Dependent Role="TBLPERSONELODEME">
+              <PropertyRef Name="OdenenKısı" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AracKiralama2023ModelStoreContainer" CdmEntityContainer="AracKiralama2023Entities3">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AracKiralama2023Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AracKiralama2023Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AracKiralama2023Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AracKiralama2023Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AracKiralama2023Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AracKiralama2023Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AracKiralama2023Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AracKiralama2023Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AracKiralama2023Model.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLARACLAR">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLARACLAR">
+              <MappingFragment StoreEntitySet="TBLARACLAR">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="YakıtTıpı" ColumnName="YakıtTıpı" />
+                <ScalarProperty Name="Plaka" ColumnName="Plaka" />
+                <ScalarProperty Name="UretımYılı" ColumnName="UretımYılı" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="AracID" ColumnName="AracID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLÇEKSENET">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLÇEKSENET">
+              <MappingFragment StoreEntitySet="TBLÇEKSENET">
+                <ScalarProperty Name="DURUM1" ColumnName="DURUM1" />
+                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+                <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
+                <ScalarProperty Name="OdemeTarih" ColumnName="OdemeTarih" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="ÇekTür" ColumnName="ÇekTür" />
+                <ScalarProperty Name="CekID" ColumnName="CekID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFIRMAHAREKETLERI">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLFIRMAHAREKETLERI">
+              <MappingFragment StoreEntitySet="TBLFIRMAHAREKETLERI">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="TUR" ColumnName="TUR" />
+                <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="URUN" ColumnName="URUN" />
+                <ScalarProperty Name="HAREKETID" ColumnName="HAREKETID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLGELIR">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLGELIR">
+              <MappingFragment StoreEntitySet="TBLGELIR">
+                <ScalarProperty Name="Acıklama" ColumnName="Acıklama" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="GelirTarıh" ColumnName="GelirTarıh" />
+                <ScalarProperty Name="GelirTutarı" ColumnName="GelirTutarı" />
+                <ScalarProperty Name="GelirTuru" ColumnName="GelirTuru" />
+                <ScalarProperty Name="GelırID" ColumnName="GelırID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLGIDER">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLGIDER">
+              <MappingFragment StoreEntitySet="TBLGIDER">
+                <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="GelirTarih" ColumnName="GelirTarih" />
+                <ScalarProperty Name="GıderTutarı" ColumnName="GıderTutarı" />
+                <ScalarProperty Name="GiderTuru" ColumnName="GiderTuru" />
+                <ScalarProperty Name="GıderID" ColumnName="GıderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLHATIRLATMA">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLHATIRLATMA">
+              <MappingFragment StoreEntitySet="TBLHATIRLATMA">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="KayıtTarıh" ColumnName="KayıtTarıh" />
+                <ScalarProperty Name="HatırlatmaTarıh" ColumnName="HatırlatmaTarıh" />
+                <ScalarProperty Name="HatırlatmaSebep" ColumnName="HatırlatmaSebep" />
+                <ScalarProperty Name="HatırlatmaID" ColumnName="HatırlatmaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMARKA">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLMARKA">
+              <MappingFragment StoreEntitySet="TBLMARKA">
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="MarkaID" ColumnName="MarkaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMUST">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLMUST">
+              <MappingFragment StoreEntitySet="TBLMUST">
+                <ScalarProperty Name="GirisTarih" ColumnName="GirisTarih" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="MustTelefon" ColumnName="MustTelefon" />
+                <ScalarProperty Name="MustAdres" ColumnName="MustAdres" />
+                <ScalarProperty Name="MustEhliyetNo" ColumnName="MustEhliyetNo" />
+                <ScalarProperty Name="MustTC" ColumnName="MustTC" />
+                <ScalarProperty Name="MustSoyad" ColumnName="MustSoyad" />
+                <ScalarProperty Name="MustAdı" ColumnName="MustAdı" />
+                <ScalarProperty Name="MustID" ColumnName="MustID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLODEMEBICIM">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLODEMEBICIM">
+              <MappingFragment StoreEntitySet="TBLODEMEBICIM">
+                <ScalarProperty Name="OdemeTıpı" ColumnName="OdemeTıpı" />
+                <ScalarProperty Name="BıcımID" ColumnName="BıcımID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLPERSODEME">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLPERSODEME">
+              <MappingFragment StoreEntitySet="TBLPERSODEME">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="PEDID" ColumnName="PEDID" />
+                <ScalarProperty Name="ODENEN" ColumnName="ODENEN" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="TUR" ColumnName="TUR" />
+                <ScalarProperty Name="PersOdemeID" ColumnName="PersOdemeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLPERSONEL">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLPERSONEL">
+              <MappingFragment StoreEntitySet="TBLPERSONEL">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="PerFoto" ColumnName="PerFoto" />
+                <ScalarProperty Name="PerAdres" ColumnName="PerAdres" />
+                <ScalarProperty Name="PerGirisTarih" ColumnName="PerGirisTarih" />
+                <ScalarProperty Name="PerSicil" ColumnName="PerSicil" />
+                <ScalarProperty Name="PerTC" ColumnName="PerTC" />
+                <ScalarProperty Name="PerTelefon" ColumnName="PerTelefon" />
+                <ScalarProperty Name="PerSoyad" ColumnName="PerSoyad" />
+                <ScalarProperty Name="PerAd" ColumnName="PerAd" />
+                <ScalarProperty Name="PerID" ColumnName="PerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLPERSONELODEME">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLPERSONELODEME">
+              <MappingFragment StoreEntitySet="TBLPERSONELODEME">
+                <ScalarProperty Name="Tarh" ColumnName="Tarh" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="OdenenKısı" ColumnName="OdenenKısı" />
+                <ScalarProperty Name="OdemeTutarı" ColumnName="OdemeTutarı" />
+                <ScalarProperty Name="OdemeTuru" ColumnName="OdemeTuru" />
+                <ScalarProperty Name="OdemeID" ColumnName="OdemeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLSIRKET">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLSIRKET">
+              <MappingFragment StoreEntitySet="TBLSIRKET">
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="SırketTıp" ColumnName="SırketTıp" />
+                <ScalarProperty Name="SırkVergı" ColumnName="SırkVergı" />
+                <ScalarProperty Name="SırkAdres" ColumnName="SırkAdres" />
+                <ScalarProperty Name="SırkTelefon" ColumnName="SırkTelefon" />
+                <ScalarProperty Name="SırkUnvan" ColumnName="SırkUnvan" />
+                <ScalarProperty Name="SırkAd" ColumnName="SırkAd" />
+                <ScalarProperty Name="SırkTC" ColumnName="SırkTC" />
+                <ScalarProperty Name="SırkID" ColumnName="SırkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLYAKIT">
+            <EntityTypeMapping TypeName="AracKiralama2023Model.TBLYAKIT">
+              <MappingFragment StoreEntitySet="TBLYAKIT">
+                <ScalarProperty Name="Yakıt" ColumnName="Yakıt" />
+                <ScalarProperty Name="YakıtID" ColumnName="YakıtID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

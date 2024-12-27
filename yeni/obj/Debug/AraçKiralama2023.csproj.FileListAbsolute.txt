@@ -1,0 +1,63 @@
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.exe.config
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.exe
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.pdb
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\Guna.UI2.dll
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.AssemblyReference.cache
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Properties.Resources.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.GenerateResource.cache
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.CoreCompileInputs.cache
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.CopyComplete
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.exe
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.pdb
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.AnaSayfa.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Personel.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Musteri.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Firmalar.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Muhasebe.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Araclar.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Kasa.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.dll
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.xml
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Login.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Hatırlatma.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.ÇekSenet.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Harcamalar.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.PersonelOdeme.resources
+C:\Users\mrpas\source\repos\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.OdemeTakip.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.exe.config
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.exe
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\AraçKiralama2023.pdb
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.dll
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\Guna.UI2.dll
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.xml
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.AssemblyReference.cache
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.AnaSayfa.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Araclar.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Firmalar.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Harcamalar.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Hatırlatma.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Kasa.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Login.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Muhasebe.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Musteri.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.OdemeTakip.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Personel.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.PersonelOdeme.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.Properties.Resources.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.ÇekSenet.resources
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.GenerateResource.cache
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.CoreCompileInputs.cache
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.CopyComplete
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.exe
+C:\Users\HAlper\Desktop\Okul Projelerim\ORİJİNAL PROJELER\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.pdb
+C:\Users\mrpas\Downloads\AraçKiralama2023\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.csproj.AssemblyReference.cache
+C:\Users\mrpas\Downloads\AraçKiralama2023\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.exe
+C:\Users\mrpas\Downloads\AraçKiralama2023\AraçKiralama2023\AraçKiralama2023\obj\Debug\AraçKiralama2023.pdb
